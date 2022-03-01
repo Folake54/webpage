@@ -22,8 +22,8 @@ function Home() {
         </div>
       </div>
 
-      <Navbar></Navbar>
-      <Form></Form>
+      <Navbar />
+      <Form />
     </div>
   );
 }

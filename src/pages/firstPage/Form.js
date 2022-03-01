@@ -32,52 +32,50 @@ function Form() {
 
   return (
     <div className="container">
-      {<pre>{JSON.stringify(formValues, undefined, 2)}</pre>}
-      {
-        <Form onSubmit={handleSubmit}>
-          <h1>Welcome to Milton Keynes</h1>
-          <div className="ui divider"></div>
-          <div className="ui form">
-            <div className="field">
-              <label>Your Name</label>
-              <input
-                type="text"
-                name="fullName"
-                placeholder="userName"
-                value={formValues.username}
-                onChange={handleChange}
-              />
-            </div>
-            <p>{formErrors.username}</p>
-
-            <div className="field">
-              <label>Email here</label>
-              <input
-                type="Email"
-                name="Email"
-                placeholder="Email"
-                value={formValues.username}
-                onChange={handleChange}
-              />
-            </div>
-            <p>{formErrors.email}</p>
-
-            <div className="field">
-              <label>Message</label>
-              <input
-                type="Message"
-                name="Message"
-                placeholder="Message"
-                value={formValues.username}
-                onChange={handleChange}
-              />
-            </div>
-            <p>{formErrors.message}</p>
-
-            <button className="fluid ui button blue">submit</button>
+      <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
+      <form onSubmit={handleSubmit}>
+        <h1>Welcome to Milton Keynes</h1>
+        <div className="ui divider"></div>
+        <div className="ui form">
+          <div className="field">
+            <label>Your Name</label>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="userName"
+              value={formValues.username}
+              onChange={handleChange}
+            />
           </div>
-        </Form>
-      }
+          <p>{formErrors.username}</p>
+
+          <div className="field">
+            <label>Email here</label>
+            <input
+              type="Email"
+              name="Email"
+              placeholder="Email"
+              value={formValues.username}
+              onChange={handleChange}
+            />
+          </div>
+          <p>{formErrors.email}</p>
+
+          <div className="field">
+            <label>Message</label>
+            <input
+              type="Message"
+              name="Message"
+              placeholder="Message"
+              value={formValues.username}
+              onChange={handleChange}
+            />
+          </div>
+          <p>{formErrors.message}</p>
+
+          <button className="fluid ui button blue">submit</button>
+        </div>
+      </form>
     </div>
   );
 }
