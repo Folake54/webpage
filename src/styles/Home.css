@@ -1,32 +1,31 @@
-/* Create two equal columns that floats next to each other */
-.imageColumn {
-  float: left;
-  width: 45%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+.home-container {
+  display: inline-flex;
+  width: 100%;
 }
 
-.textColumn {
-  float: right;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+.left-content {
+  display: flex;
 }
 
-/* Clear floats after the columns */
-.row {
-  content: "";
-  display: table;
-  clear: both;
+.right-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+}
+.image {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .imageStyle {
   object-fit: cover;
-  height: 100%;
-  width: 450px;
 }
 
 .home {
-  margin: 0 2rem 0 2rem;
   color: white;
+}
+
+body {
+  margin: 0px;
+  /* background-color: black; */
 }
