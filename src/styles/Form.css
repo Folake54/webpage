@@ -35,6 +35,7 @@
   background-color: black;
 }
 .pageTwo {
-  background-size: auto;
   color: black;
+  width: 100%;
+  height: 100%;
 }
