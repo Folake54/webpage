@@ -4,7 +4,10 @@ import "../../styles/Form.css";
 const FormMessage = () => {
   return (
     <div>
-      <div className="pageTwo">lorem lorem</div>
+      <div className="pageTwo">
+        <h1>Welcome to milton keynes</h1>
+      </div>
+      <div> </div>
     </div>
   );
 };

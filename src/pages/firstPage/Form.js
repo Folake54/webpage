@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Form() {
   const navigate = useNavigate();
-  const initialValues = { username: "", email: "", password: "" };
+  const initialValues = {};
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -19,7 +19,7 @@ function Form() {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-    navigate("/form-message", formValues);
+    navigate("/form-message", formValues, { state: { Form } });
   };
 
   const validate = (values) => {
@@ -48,17 +48,18 @@ function Form() {
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div className="ui message success">Signed in successfully</div>
       ) : (
-        <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
+        <pre></pre>
       )}
 
       <form onSubmit={handleSubmit}>
-        <h1 className="login">Login Form</h1>
+        <h1 className="login">Subscribe to the Milton keynes Newsletter</h1>
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="formInputs">
             <h1 className="field">username</h1>
             <input
               type="text"
+              className="input-style"
               name="username"
               placeholder="Username"
               value={formValues.username}
@@ -67,10 +68,11 @@ function Form() {
           </div>
           <p>{formErrors.username}</p>
           <div className="formInputs">
-            <h1 className="field">Email</h1>
+            <h1 className="field">Email Address</h1>
             <input
               type="text"
               name="email"
+              className="input-style"
               placeholder="Email"
               value={formValues.email}
               onChange={handleChange}
@@ -82,6 +84,7 @@ function Form() {
             <h1 className="field">password</h1>
             <input
               type="password"
+              className="lastInput"
               name="password"
               placeholder="Password"
               value={formValues.password}
