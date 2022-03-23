@@ -1,21 +1,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.container > form {
   width: 70%;
   border: 1px solid #dfdfdf;
   padding: 20px;
   border: 1px solid #dfdfdf;
-  padding: 20px;
+  margin-left: 10%;
   border-radius: 5px;
   background: #fff;
-}
-
-.formInputs {
-  border-width: 50px;
 }
 
 .input-style {
@@ -30,12 +22,11 @@
 
 .buttonBlue {
   display: flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
-  margin: 50px;
-  margin-left: 40%;
   padding: 7px;
+  margin-left: 45%;
+  width: 70px;
 }
 
 .formInputs .field {

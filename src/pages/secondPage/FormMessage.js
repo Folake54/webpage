@@ -1,15 +1,15 @@
-import React from "react";
 import "../../styles/Form.css";
+import React, { useContext } from "react";
+import { LoginContext } from "../../contexts/LoginContext";
 
-const FormMessage = () => {
+function FormMessage() {
+  const { username } = useContext(LoginContext);
   return (
-    <div>
-      <div className="pageTwo">
-        <h1>Welcome to milton keynes</h1>
-      </div>
-      <div> </div>
+    <div className="pageTwo">
+      <h1> Username</h1>
+      <h2>name:{username}</h2>
     </div>
   );
-};
+}
 
 export default FormMessage;
