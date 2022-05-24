@@ -1,16 +1,18 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { LoginContext } from "./contexts/LoginContext";
 import "./App.css";
 import Home from "../src/pages/firstPage/Home";
-// import FormMessage from "./pages/secondPage/FormMessage";
+import FormMessage from "./pages/secondPage/FormMessage";
 
 function App() {
+  const [showProfile, setShowProfile] = useState(false);
+  const [userName, setUsername] = useState("");
+
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        {/* <Route path="/form-message" exact element={<FormMessage />} /> */}
-      </Routes>
+      <LoginContext.Provider value={{ userName, setUsername, setShowProfile }}>
+        {showProfile ? <FormMessage /> : <Home />}
+      </LoginContext.Provider>
     </div>
   );
 }

@@ -1,55 +1,60 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { LoginContext } from "../../contexts/LoginContext";
 import "../../styles/Form.css";
 
-function Form() {
+function login() {
   const { setUsername, setShowProfile } = useContext(LoginContext);
-  const { useEmail } = useState();
 
   return (
-    <form className="container">
-      <h1 className="login">Subscribe to the Milton keynes Newsletter</h1>
-      <div className="formInputs">
-        <h1 className="field">username</h1>
+    <div className="container">
+      <form>
+        <h1 className="login">Subscribe to the Milton keynes Newsletter</h1>
+        <div className="ui divider"></div>
+        <div className="ui form">
+          <div className="formInputs">
+            <h1 className="field">username</h1>
+            <input
+              type="text"
+              className="input-style"
+              name="username"
+              placeholder="Username"
+              onChange={(event) => {
+                setUsername(event.target.value);
+              }}
+            />
+          </div>
 
-        <input
-          className="input-style"
-          type="text"
-          placeholder="Username..."
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </div>
-      <div className="formInputs">
-        <h1 className="field">Email Address</h1>
-        <input
-          className="input-style"
-          type="text"
-          placeholder="Email"
-          onChange={(event) => {
-            useEmail(event.target.value);
-          }}
-        />
-      </div>
-      <div className="formInputs">
-        <h1 className="field">Password</h1>
-        <input
-          className="lastInput"
-          type="text"
-          placeholder="Password..."
-          onChange={() => {
-            setShowProfile(true);
-          }}
-        />
-      </div>
-      <button
-        className="buttonBlue"
-        onClick={() => {
-          setShowProfile(true);
-        }}>
-        LOGIN
-      </button>
-    </form>
+          <div className="formInputs">
+            <h1 className="field">Email Address</h1>
+            <input
+              type="text"
+              name="email"
+              className="input-style"
+              placeholder="Email"
+            />
+          </div>
+
+          <div className="formInputs">
+            <h1 className="field">password</h1>
+            <input
+              type="password"
+              className="lastInput"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+
+          <button
+            className="buttonBlue"
+            onClick={() => {
+              setShowProfile(true);
+            }}>
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
 
-export default Form;
+export default login;
