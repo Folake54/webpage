@@ -10,7 +10,9 @@ function App() {
 
   return (
     <div className="App">
-      <LoginContext.Provider value={{ userName, setUsername, setShowProfile }}>
+      <LoginContext.Provider
+        className="pageTwo"
+        value={{ userName, setUsername, setShowProfile }}>
         {showProfile ? <FormMessage /> : <Home />}
       </LoginContext.Provider>
     </div>

@@ -7,7 +7,7 @@ function login() {
 
   return (
     <div className="container">
-      <form>
+      <form className="cover">
         <h1 className="login">Subscribe to the Milton keynes Newsletter</h1>
         <div className="ui divider"></div>
         <div className="ui form">

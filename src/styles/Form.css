@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   width: 70%;
-  border: 1px solid #dfdfdf;
   padding: 20px;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #0303038e;
   margin-left: 10%;
   border-radius: 5px;
-  background: #fff;
+  background: #f0f1f0;
 }
 
 .input-style {
-  width: 99%;
+  width: 90%;
+  background-color: white;
 }
 
 .login {
@@ -27,16 +27,28 @@
   padding: 7px;
   margin-left: 45%;
   width: 70px;
+  background-color: rgb(127, 144, 255);
 }
 
 .formInputs .field {
   color: black;
 }
 .pageTwo {
-  background-color: whitesmoke;
-  color: black;
+
+ background-color: #FFFFFF !important;
+  color:black;
 }
 .lastInput {
-  width: 99%;
-  height: 200px;
+  width: 90%;
+  height: 170px;
+  background-color:white;
+}
+
+.cover{
+  border: black;
+  background-color: white;
+  display: flexbox;
+  padding-left: 5%;
+ 
+  
 }
