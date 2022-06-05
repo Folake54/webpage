@@ -3,7 +3,9 @@ import { LoginContext } from "../../contexts/LoginContext";
 import "../../styles/Form.css";
 
 function login() {
-  const { setUsername, setShowProfile } = useContext(LoginContext);
+  const { setUsername, setShowProfile, setUserEmail } = useContext(
+    LoginContext
+  );
 
   return (
     <div className="container">
@@ -31,6 +33,9 @@ function login() {
               name="email"
               className="input-style"
               placeholder="Email"
+              onChange={(event) => {
+                setUserEmail(event.target.value);
+              }}
             />
           </div>
 
